@@ -1,0 +1,36 @@
+ h1 {
+box-sizing: border-box;
+margin: 0;
+}
+body {
+font-family: 'Times New Roman', Times, serif;
+}
+header {
+background-color:pink;
+color: white;
+text-align: center;
+padding: 20px;
+}
+nav {
+float: left;
+background-color: greenyellow;
+width: 40%;
+height: 300px;
+padding: 20px;
+}
+article {
+background-color: blue;
+float: left;
+width: 70%;
+padding: 20px;
+}
+aside {
+clear: both;
+}
+footer {
+background: #222;
+color: #eee;
+text-align: center;
+padding: 0.5em;
+font-size: 0.9em;
+} 
