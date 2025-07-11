@@ -1,0 +1,20 @@
+function add(a, b) 
+{return a + b}
+console.log(add(5,1))
+function multiply(a, b)
+{return a * b}
+console.log(multiply(6,20))
+function sub(a, b) 
+{return a - b}
+console.log(sub(14,6))
+function div(a, b)
+{return a / b}
+console.log(div(50,10))
+function combine(name)
+{return "hello " + name}
+console.log(combine("eppey"))
+console.log(combine("neesh"))
+console.log(combine("gareth"))
+function connect(name)
+{return "goodbye " + name}
+console.log(connect("eppey"))
