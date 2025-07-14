@@ -1,0 +1,10 @@
+let locations = ['Seattle' , 'Auckland' , 'Los Angeles' , 'Vancouver' , 'Mexico City'];
+locations[0] = 'Christchurch' ;
+console.log(locations); 
+locations[3] = 'San Jose';
+console.log(locations); 
+locations.unshift('Salt Lake City');
+console.log(locations); 
+let lastLocation = locations.pop();
+console.log(lastLocation); 
+console.log(locations); 

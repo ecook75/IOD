@@ -1,0 +1,42 @@
+const book = {
+    "Title" : "Basic Rules of Soccer",
+"Description" : "A soccer instructional",
+"Author" : "Eppey Cook",
+"NumberofPages" : 300
+}
+console.log(book.Title);
+console.log(book.Description); 
+console.log(book.Author);
+console.log(book.NumberofPages);
+book.NumberofPages = 320
+
+const bookarray = [{
+    "Title" : "Oceanography: A Guide",
+"Description" : "Oceanography Basics",
+"Author" : "Eppey Cook",
+"Number of Pages" : 400
+},
+{
+    "Title" : "Marine Biology: A Guide",
+"Description" : "Marine Biology Basics",
+"Author" : "Eppey Cook",
+"Number of Pages" : 410
+},
+{
+    "Title" : "Astronomy: A Guide",
+"Description" : "Astronomy Basics",
+"Author" : "Eppey Cook",
+"Number of Pages" : 420
+},
+{
+    "Title" : "Photography: Archive",
+"Description" : "A Photography Archive",
+"Author" : "Eppey Cook",
+"Number of Pages" : 430
+},
+{
+    "Title" : "Architecture: Archive",
+"Description" : "An Architecture Archive",
+"Author" : "Eppey Cook",
+"Number of Pages" : 440
+}]

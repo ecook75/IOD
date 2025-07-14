@@ -18,3 +18,30 @@ console.log(combine("gareth"))
 function connect(name)
 {return "goodbye " + name}
 console.log(connect("eppey"))
+
+
+function add(a, b) {
+return a + b;
+}
+if (add(5, 1) != 6) { throw new Error('Test failed');}
+console.log('All tests passed.');
+if (add(5, 1) != 0) { throw new Error(Test failed');}
+console.log(All tests passed.);
+
+function multiply(a, b) {
+return a * b;
+}
+if (multiply(6, 20) != 120) { throw new Error('Test failed');}
+console.log('All tests passed.');
+function sub(a, b) {
+return a - b;
+}
+if (sub(14, 6) != 8) { throw new Error('Test failed');}
+console.log('All tests passed.');
+function div(a, b) {
+return a / b;
+}
+if (div(50, 10) != 5) { throw new Error('Test failed');}
+console.log('All tests passed.');
+
+
