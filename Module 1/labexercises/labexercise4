@@ -25,8 +25,8 @@ return a + b;
 }
 if (add(5, 1) != 6) { throw new Error('Test failed');}
 console.log('All tests passed.');
-if (add(5, 1) != 0) { throw new Error(Test failed');}
-console.log(All tests passed.);
+if (add(5, 1) != 0) { throw new Error('Test failed');}
+console.log('All tests passed.');
 
 function multiply(a, b) {
 return a * b;
