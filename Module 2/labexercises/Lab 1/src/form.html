@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Roadside Assistance</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Information about Roadside Assistance">
+  <meta name="keywords"content="Emergency, Unexpected, Breakdowns">
+  <meta name="author" content="Eppey Cook">
+  <meta name= "viewport" content="width=device-width, initial-scale=1">
+  <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+</head>
+<body>
+<nav>
+  <a href= "index.html">home</a>
+</nav>
+
+<form method="POST" action="http://127.0.0.1:5500/form.html">
+</form>
+<div>
+  <input type="text" id="first name" name="last name" required>
+
+</div>
+  <label>One:</label>
+  <div class="Button 1">
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+  </div>
+    <label>Two:</label>
+  <div class="Button 2">
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+  </div>
+    <label>Three:</label>
+  <div class="Button 3">
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+  </div>
+  <div>
+  <label>Subscribe to:</label>
+  <div class="CB1">
+    <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+    <label for="newsletter">Newsletter</label>
+  </div>
+  <label>Subscribe to:</label>
+  <div class="CB2">
+    <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+    <label for="newsletter">Newsletter</label>
+  </div>
+  <label>Subscribe to:</label>
+  <div class="CB3">
+    <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+    <label for="newsletter">Newsletter</label>
+  </div>
+  </div>
+<label for="dd">DD:</label>
+  <select id="DD" name="DD">
+    <option value="">--Select--</option>
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+    <option value="uk">UK</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+
+<h2 style="text-align:center">User Registration Form</h2>
+
+<form action="/submit" method="POST" enctype="multipart/form-data">
+  <!-- Text Input -->
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <!-- Email Input -->
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required>
+
+  <!-- Password Input -->
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <!-- Number Input -->
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" min="0" max="120">
+
+  <!-- Checkbox -->
+  <label>Subscribe to:</label>
+  <div class="checkbox-radio-group">
+    <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+    <label for="newsletter">Newsletter</label>
+  </div>
+
+  <!-- Radio Buttons -->
+  <label>Gender:</label>
+  <div class="checkbox-radio-group">
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+  </div>
+
+  <!-- Select Dropdown -->
+  <label for="country">Country:</label>
+  <select id="country" name="country">
+    <option value="">--Select--</option>
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+    <option value="uk">UK</option>
+  </select>
+
+  <!-- Textarea -->
+  <label for="about">Tell us about yourself:</label>
+  <textarea id="about" name="about" rows="4"></textarea>
+
+  <!-- File Upload -->
+  <label for="resume">Upload Resume:</label>
+  <input type="file" id="resume" name="resume">
+
+  <!-- Color and Date Inputs -->
+  <label for="favcolor">Favorite Color:</label>
+  <input type="color" id="favcolor" name="favcolor">
+
+  <label for="birthdate">Birthdate:</label>
+  <input type="date" id="birthdate" name="birthdate">
+
+  <!-- Range Input -->
+  <label for="volume">Volume:</label>
+  <input type="range" id="volume" name="volume" min="0" max="100">
+
+  <!-- Submit -->
+  <button type="submit">Register</button>
+
+</form>
+
+</body>
+
+</html>
