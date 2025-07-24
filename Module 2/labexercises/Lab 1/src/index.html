@@ -3,6 +3,7 @@
   <a>http://127.0.0.1:5500/index.html
     http://127.0.0.1:5500/form.html
   </a>
+  <!--4.4-->
   <style>
     table, th, td {
         border: 1px solid black;
@@ -10,9 +11,11 @@
   
 </style>
 
+<!--2.1-->
 <title>HTML Practice</title>
 <link rel="stylesheet" href="index.css"/>
 
+<!--2.2-->
 <meta charset="UTF-8">
 <meta name="description"content="Page description" 
 <meta name="keywords"content="HTML, INDEX" 
@@ -23,13 +26,24 @@
   <nav>
   <a href= "form.html">form</a>
 </nav>
+<!--3.8-->
   <h1>HTML Content</h1>
 
-
+<!--article 3.7-->
   <article>
+    <!--3.9-->
       <h2>HTML Learning</h2>
-  <div>HTML Content</div><div>CSS Content</div><div>Lab work</div>
-  <span style="color:blue">blue</span><span style="color:green">blue</span><span style="color:red">blue</span>
+      <!--DIVS 3.1-->
+  <div>HTML Content</div>
+  <div>CSS Content</div>
+  <div>Lab work</div>
+
+  <!--SPANS-->
+  <span style="color:blue">blue</span>
+  <span style="color:green">blue</span>
+  <span style="color:red">blue</span>
+
+  <!--Paragraph vs. Pre-->
   <p>
 p represents paragraph     without preserving      spacing
 </p>
@@ -40,6 +54,8 @@ font, and it preserves
 both      spaces and
 line breaks
 </pre>
+
+<!--Unordered list 3.3-->
 <ul ><li>1</li></ul>
 <ul ><li>2</li></ul>
 <ul>
@@ -48,6 +64,8 @@ line breaks
     </ul>
 <ul><li>3</li></ul>
 <ul><li>4</li></ul>
+
+<!--Ordered list 3.5 & 3.5 & 3.6-->
 <ol><ol><li>goodbye</li>
 <li>ciao</li></ol>
     <li>hi</li>
@@ -55,59 +73,82 @@ line breaks
       <li>ciao</li>
        
 </ol>
+
 </article>
 
+
+<!--4.1-->
 <article>
 
+<!--4.2-->
 
+<h2>Tables</h2>
 
   <table>
+    <!--4.7-->
     <thead>
     <tr>
         <th colspan="2">First header</th>
         <th>Second header</th>
         
     </tr>
-    </thead><tr>
-  </tr>
+    </thead>
+    <tr>
+    </tr>
     <tbody>
         <tr>
             <td>First cell - first row</td>
             <td>Second cell - first row</td>
+            <!--4.6-->
             <td>Third cell - first row</td>
         </tr>
+        <!--4.3-->
         <tr>
-            <td>First cell - second row</td>
+            <td rowspan="2">First cell - second row</td>
             <td>Second cell - second row</td>
-            <td rowspan="2">Third cell - second row</td>
+             <!--4.5-->
+            <td>Third cell - second row</td>
         </tr>
+        <!--4.8-->
          <tr>
             <td>First cell - third row</td>
             <td>Second cell - third row</td>
+           
             <td>Third cell - third row</td>
         </tr>
     </tbody>
 </table>
 </article>
 
+<!--5.1-->
 <article>
 
+  <h2>Images and Audio</h2>
 
+  <!--5.2-->
+  
 
+  <img src="https://picsum.photos/400/400" alt="Random" width="320" height="240"  />
 
+  <!--5.3-->
+  <img src="lab-1-html/src/assets/html_lab_image.jpg " alt="flower"width="320" height="240"/>
+  
+<!--5.4-->
 
-
-
-  <h2>HTML Learning Module</h2>
-  <img src="https://picsum.photos/400/400" alt="Snowy Forest"width="320" height="240"  />
-  <img src="html_lab_image.jpg " alt="flower"width="320" height="240"
   <video controls width="250">
-    <source src="/assets/flower.webm" type="video/webm">
+    <source src="./assets/flower.webm" type="video/webm">
     Sorry, your browser doesn't support embedded videos.
 </video>
-<audio controls src="/assets/t-rex-roar.mp3">
+
+<!--5.5 - 5.7-->
+<figure>
+<audio autoplay controls src="./assets/t-rex-roar.mp3">
     Your browser does not support the <code>audio</code> element.
 </audio>
+  <figcaption>T-Rex Roar.</figcaption>
+  </figure>
+
+
 
 
 
@@ -119,14 +160,6 @@ line breaks
   <img src="assets/html_lab_image.jpg" alt="Me not on holidays" />
 </figure>
 
-<br>
-
-<video width="320" height="240" controls>
-  <source src="assets/flower.webm" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<figcaption>Nature Observance</figcaption>
 </article>
 
 </body
