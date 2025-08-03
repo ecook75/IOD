@@ -327,7 +327,8 @@
 // const hiloProducts = [...products].sort((p1, p2) => p1.price - p2.price).reverse()
 // .map(prod => ({id: prod.id, title: prod.title}))
 // console.log(hiloProducts)
-// // [ {id: 2, title: "Men's Hoodie"}, {id: 3, title: 'Denim Jeans'}, {id: 1, title: 'Sleeveless Tee'} ]
+// // [ {id: 2, title: "Men's H
+//oodie"}, {id: 3, title: 'Denim Jeans'}, {id: 1, title: 'Sleeveless Tee'} ]
 
 // const animalsArr = ['tiger', 'lion', 'elephant', 'giraffe']
 // for (let animal of animalsArr) { console.log(animal); } // prints each animal in turn
