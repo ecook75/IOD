@@ -377,8 +377,23 @@ console.log(today.getHours()*60+today.getMinutes() + ' minutes have passed so fa
 console.log(today.getHours()*60*60+today.getMinutes()*60+today.getSeconds() + ' seconds have passed so far today')
 
 
+//c.
+
+const birthDate = new Date(1999, 11, 19); 
 
 
+let years = today.getFullYear() - birthDate.getFullYear();
+let months = today.getMonth() - birthDate.getMonth();
+let days = today.getDate() - birthDate.getDate();
+
+
+  
+  const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+  days += prevMonth.getDate();
+
+
+
+//d.
 
 
 
