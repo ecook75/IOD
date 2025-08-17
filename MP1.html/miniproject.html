@@ -1,0 +1,106 @@
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Introduction to Interval Running</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+<style>
+
+        
+        body {
+        background-color: #eff4f8; 
+        transition: background-color 5s ease-in; 
+        font-family: "Bitter", serif;
+        }
+
+        body.fade-in {
+        background-color: #7aaec0; 
+        }
+        p {
+        line-height: 2; 
+        }
+
+        h2 {
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+        }
+        .card {
+        height: 40rem;
+}
+    </style>
+
+
+</head>
+<body> 
+ 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="runningstyles.html">Running Styles <span class="sr-only"></span></a>
+      </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Basics of Interval Running</h2>
+  
+
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <h3>About</h3>
+      <p>Interval running is a training method that alternates periods of high-intensity running with periods of rest or lower-intensity activity. Unlike steady-state running, which maintains a constant pace, interval running challenges the body with repeated bursts of effort followed by recovery. 
+        <p>This approach is widely used by athletes to improve speed, endurance, and overall performance, and it is equally popular among recreational runners for its efficiency and variety. By combining intense exertion with strategic rest, interval running delivers powerful fitness results in a relatively short amount of time.
+
+
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <h3>Objectives and Benefits</h3>
+      <p> Interval running offers a wide range of benefits for both fitness and overall health. By alternating short bursts of intense running with periods of rest or lower-intensity movement, it significantly improves cardiovascular endurance and teaches the body to use oxygen more efficiently. 
+        <p>These workouts build speed and power by targeting fast-twitch muscle fibers, while also enhancing running economy for better performance at various paces. On a muscular and metabolic level, interval running boosts anaerobic capacity, helping the body tolerate and clear lactic acid more effectively, and increases calorie burn through an elevated post-workout metabolism. 
+            <p>The rapid bursts strengthen leg muscles, tendons, and stride power, while the changing intensity keeps workouts engaging and helps develop mental toughness. Because interval running is highly time-efficient, many sessions last only 20–30 minutes yet deliver results comparable to or better than longer steady-state runs.</p> 
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script>
+     function addCard(title, text, content) {
+        // clone the template
+        const template = document.getElementById("news-template")
+            .content.cloneNode(true);
+        // populate the template
+        template.querySelector('.card-title').innerText = title;
+        template.querySelector('.card-text').innerText = text;
+        template.querySelector('.card-content').innerText = content;
+            // include the populated template into the page
+            document.querySelector('#card-list').appendChild(template);
+    }
+    news.forEach(item => {
+        addCard(item.id, item.title, item.content);
+    });
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Latest News</title>
+    <style>
+        
+        news-item {
+            border: 3px solid blueviolet;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            padding: 10px;
+            background:greenyellow;
+
+        }
+
+        .news-title {
+      font-weight: bold;
+      font-size: 5px;
+    }
+    .news-content {
+      margin-top: 10px;
+    }
+    </style>
+    <script>
+
+        let news = [
+{ id: 1, title: 'Election Results',
+content: "Newly elected minister..." },
+{ id: 2, title: 'Sporting Success',
+content: "World Cup winners..." },
+{ id: 3, title: 'Tornado Warning',
+content: "Residents should prepare..." }
+];
+
+function addCard(title, text, content) {
+            // clone the template
+            const template = document.getElementById("news-template").content.cloneNode(true);
+
+            // populate the template
+            template.querySelector('.card-title').innerText = title;
+            template.querySelector('.card-text').innerText = text;
+            template.querySelector('.card-content').innerText = content;
+
+            // include the populated template into the page
+            document.getElementById('card-list').appendChild(template);
+        }
+
+        
+        news.forEach(item => {
+            addCard(item.id, item.title, item.content);
+
+        });
+        
+
+        
+        
+    </script>
+</head>
+
+<body>
+
+    <template id="news-template">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-text"></div>
+                    <div class="card-content"></div>
+                </div>
+            </div>
+    </template>
+
+    
+    <div id="#card-list"></div>
+
+    
+</body>
+
+</html>
