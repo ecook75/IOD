@@ -12,16 +12,16 @@ import Comment from './components/Comment'
 import { FancyBox, Callout } from './components/FancyBox'
 import MoviesList from './components/MoviesList'
 import MoodChanger from './components/MoodChanger'
-
+import LoginForm from './components/LoginForm'
 //Exercise 3
 
-import Emoji from './components/Emoji'
+//import EmojiChanger from './components/Emoji'
 
 
 //Exercise 2
 
 import BigCats from './components/BigCats'
-//
+
 import BirthdayTranslator from './components/BirthdayTranslator'
 import Weather from './components/Weather'
 
@@ -151,13 +151,14 @@ return (
 //<MoodChanger/>
 
 //Exercise 2
-//<BigCats/>
+<BigCats/>
 
 //<BirthdayTranslator/>
 //<Weather/>
-
+//<LoginForm/>
 //Exercise 3
-<Emoji/>
+//<EmojiChanger/>
+
 
 );
 }

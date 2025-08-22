@@ -1,4 +1,4 @@
-//Exercise 2
+//Exercises 2 and 4
 
 import SingleCat from './SingleCat'
 import { useState } from 'react';
@@ -15,20 +15,53 @@ export default function BigCats() {
   ];
 
 
+const [currentCats, setCurrentCats] =
+useState(cats);
 
-  const catItems = cats.map(cat => (
-    // <li key={cat.id}>
-      {/* {cat.name} ({cat.latinName}) */}
-    //</li>
+
+const catItems = currentCats.map(cat => (
+<cat
+ key={cat.id} // key prop is required for lists
+name={cat.name}
+latinName={cat.latinName}
+BigCatURL={cat.BigCatURL}/>
+
+)
+);
+
+const handleReverseCats = () => {
+// first clone the original, so we don’t mutate it
+let newCats = [...currentCats];
+newCats.reverse(); // 2. modify the clone
+setCurrentCats(newCats); // 3. set updated clone in state
+}
+
+
+const handleSortCats = () => {
+let newCats = [...currentCats];
+newCats.sort((cat1 , cat2) => cat1.name < cat2.name?-1:1);
+//newCats.sort();
+setCurrentCats(newCats)
+}
+
+
+
+  // const catItems = cats.map(cat => (
+  //   // <li key={cat.id}>
+  //     {/* {cat.name} ({cat.latinName}) */}
+  //   //</li>
   
-  ));
+  // ));
 
-  return (
-    <div className="List">
-      <ul>{cats.map(cat => (
-    <SingleCat name= {cat.name} latinName= {cat.latinName} BigCatURL= {cat.BigCatURL}/>
-      ))
-      }</ul>
-    </div>
+ return (
+   <div className="List">
+      <ul>{currentCats.map(cat => (
+<SingleCat name= {cat.name} latinName= {cat.latinName} BigCatURL= {cat.BigCatURL}/>
+    ))
+  }
+  { catItems }</ul>
+<button onClick={handleReverseCats}>Reverse </button>
+<button onClick={handleSortCats}>Alphabetize</button>
+   </div>
   );
 }

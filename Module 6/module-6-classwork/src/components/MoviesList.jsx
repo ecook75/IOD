@@ -62,23 +62,73 @@ newMovies.reverse(); // 2. modify the clone
 setCurrentMovies(newMovies); // 3. set updated clone in state
 }
 
+// add a new item to an array or object - RIGHT WAY using spread to clone original then adding in new item
+// let newMovies = [...currentMovies, {
+// id: 4, title: "The Whale", year: 2022,
+// synopsis: "A morbidly obese teacher attempts to reconnect with his daughter.",
+// }]
+
+// const handleAddMovie = () => {
+//    const newMovie = {
+//       id: newMovies.length + 1,
+//       title: "New Movie",
+//       year: new Date().getFullYear(),
+//       synopsis: "This is a new movie synopsis.",
+//    };
+//    setCurrentMovies([...newMovies, newMovie]);
+// }
+
+
+function AddMovieForm({onAddMovie}) {
+const [title, setTitle] = useState('')
+const [year, setYear] = useState('')
+// ++ add support for the synopsis field as well, here and below
+
+const handleSubmit = (e) => {
+//e.preventDefault();
+//onAddMovie({title, year})
+}
 return (
-<div className="MoviesList">
-<ul>
-{ movieItems }
-</ul>
-<button onClick={handleReverseMovies}>Reverse
-List</button>
-</div>
-)
+   <div className="AddMovieForm componentBox">
+      <form onSubmit={handleSubmit}>
+         <label>Movie Title:
+            <input name="title" value={title}
+               onChange={(e) => setTitle(e.target.value)} />
+         </label>
+         <label>Year Released:
+            <input name="year" type="number" value={year}
+               onChange={(e) => setYear(e.target.value)} />
+         </label>
+         <button>Add Movie</button>
+      </form>
+   </div>
+   )
+}
+// add this in MoviesList component
+const handleAddMovie = (newMovie) => {
+   newMovie.id = currentMovies.length + 1; // unreliable but succinct
+   setCurrentMovies([...currentMovies, newMovie])
 }
 
-// return (
+const handleDeleteLast = () => {
+   if (!currentMovies.length ) return; //no movies to delete
+      setCurrentMovies (currentMovies.slice(0, -1)); 
+   //slice returns a new array without the last element
+}
 
-//    <div className="MoviesList">
-// <ul>{ movieItems }</ul>
-// </div>)
-   
-   // }
+
+
+return (
+
+<div className="MoviesList">
+<ul>{ movieItems }</ul>
+<button onClick={handleReverseMovies}>Reverse </button>
+<button onClick={handleAddMovie}>Add </button>
+<button onClick={handleDeleteLast}>Delete</button>
+<AddMovieForm onAddMovie={handleAddMovie}/>
+</div>)
+
+
+}
 
 export default MoviesList;

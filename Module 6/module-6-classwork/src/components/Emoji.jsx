@@ -1,30 +1,31 @@
 import { useState } from "react";
 
 
-const [mood, setMood] = useState('happy');
 
+function EmojiChanger() {
 
+    const [emoji, setEmoji] = useState("😄")
 
-function MoodChanger() {
-
-    const [mood, setMood] = useState("😄")
+    const handleWinLotto = () => {
+    setEmoji("😄");
+        
+    };
 
     return(
-        <div className="MoodChanger componentBox">
-            Current Mood: {mood}
+        <div className="EmojiChanger componentBox">
+            Current Emoji: {emoji}
             <br/>
-            <button onClick={() => setMood('😴')}>
-                Stay Up Late
+            <button onClick={() => setEmoji('😴')}>
+                Change Mood
                 </button>     
-            <button onClick={() => setMood('🤤')}>
-                Skipped Lunch
+            <button onClick={() => setEmoji('🤤')}>
+                Change Mood Again!
                 </button>
-            <button onClick={() => setMood('😭')}>
-                IDK
-            </button>
-
+                <button onClick={handleWinLotto}>
+                    Win Lotto
+                </button>
    </div>
     )
 }
 
-export default Emoji
+export default EmojiChanger;
