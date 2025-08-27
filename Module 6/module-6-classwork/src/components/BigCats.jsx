@@ -1,5 +1,6 @@
-//Exercises 2 and 4
+//Exercises 2, 4 and 5
 
+import AddCatForm from './AddCatForm';
 import SingleCat from './SingleCat'
 import { useState } from 'react';
 
@@ -19,15 +20,17 @@ const [currentCats, setCurrentCats] =
 useState(cats);
 
 
-const catItems = currentCats.map(cat => (
-<cat
- key={cat.id} // key prop is required for lists
-name={cat.name}
-latinName={cat.latinName}
-BigCatURL={cat.BigCatURL}/>
+// const catItems = currentCats.map(cat => (
+// <cat
+//  key={cat.id} // key prop is required for lists
+// name={cat.name}
+// latinName={cat.latinName}
+// BigCatURL={cat.BigCatURL}
+// Delete={Delete}
+// />
 
-)
-);
+// )
+// );
 
 const handleReverseCats = () => {
 // first clone the original, so we don’t mutate it
@@ -37,12 +40,41 @@ setCurrentCats(newCats); // 3. set updated clone in state
 }
 
 
+
+
+const handleAddCat = (newCat) => {
+newCat.id = currentCats.length + 1; // unreliable but succinct
+setCurrentCats([...currentCats, newCat])
+}
+
+const handleDeleteCat = (idToDelete) => {
+    setCurrentCats(prev => prev.filter(cat => cat.id !== idToDelete));
+  };
+
 const handleSortCats = () => {
 let newCats = [...currentCats];
 newCats.sort((cat1 , cat2) => cat1.name < cat2.name?-1:1);
 //newCats.sort();
-setCurrentCats(newCats)
+setCurrentCats(newCats);
 }
+
+const filterCats = () => {
+  const newCats = currentCats.filter ((cat) => cat.latinName.startsWith("Panthera"))
+  
+  setCurrentCats(newCats);
+}
+
+const handleReset = () => {
+  setCurrentCats(cats);
+}
+
+
+
+  
+// const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+// const result = words.filter((word) => word.length > 6);
+
 
 
 
@@ -56,12 +88,24 @@ setCurrentCats(newCats)
  return (
    <div className="List">
       <ul>{currentCats.map(cat => (
-<SingleCat name= {cat.name} latinName= {cat.latinName} BigCatURL= {cat.BigCatURL}/>
+<SingleCat 
+key={cat.id} // key prop is required for lists
+id= {cat.id}
+name= {cat.name} 
+latinName= {cat.latinName} 
+BigCatURL= {cat.BigCatURL}
+Delete={handleDeleteCat}
+/>
     ))
-  }
-  { catItems }</ul>
+}
+</ul>
 <button onClick={handleReverseCats}>Reverse </button>
 <button onClick={handleSortCats}>Alphabetize</button>
+<button onClick={filterCats}>Panthera</button>
+<button onClick={handleReset}>Reset</button>
+<AddCatForm onAddCat={handleAddCat}/>
+
    </div>
   );
 }
+

@@ -16,13 +16,14 @@
         
         body {
         background-color: #eff4f8; 
-        transition: background-color 5s ease-in; 
+        transition: background-color 2s ease-in; 
         font-family: "Bitter", serif;
         }
 
-        body.fade-in {
-        background-color: #7aaec0; 
+        body.loaded {
+          background-color: #93bfe5;
         }
+
         p {
         line-height: 2; 
         }
@@ -35,6 +36,9 @@
         }
         .card {
         height: 40rem;
+        opacity: 0;
+        animation: fadeIn 2s ease-out forwards;
+        
 }
     </style>
 

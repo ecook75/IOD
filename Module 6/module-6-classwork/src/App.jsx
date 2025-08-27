@@ -13,18 +13,31 @@ import { FancyBox, Callout } from './components/FancyBox'
 import MoviesList from './components/MoviesList'
 import MoodChanger from './components/MoodChanger'
 import LoginForm from './components/LoginForm'
+import ExplodingBomb from './components/ExplodingBomb'
+import Clock from './components/Clock'
+import ClockDisplay from './components/Clock'
+import ActivityFinder from './components/ActivityFinder'
+import WeatherAPIProxy from './components/WeatherAPI'
+import RefCounter from './components/RefCounter'
+import VideoPlayer from './components/VideoPlayer'
+import PostListReducer from './components/PostListReducer'
+import SubscribeForm from './components/SubscribeForm'
+import ActivityFinder2 from './components/ActivityFinder2'
+import { UserProvider } from './components/context/UserContext'
+import BitcoinRates from './components/BitcoinRates'
 //Exercise 3
+
 
 //import EmojiChanger from './components/Emoji'
 
 
-//Exercise 2
+//Exercises 2, 4 and 5
 
 import BigCats from './components/BigCats'
 
 import BirthdayTranslator from './components/BirthdayTranslator'
 import Weather from './components/Weather'
-
+import ReducerCounter from './components/ReducerCounter'
 // function ExampleComponent() {
 // return (
 // <div className="ExampleComponent componentBox">
@@ -118,7 +131,8 @@ function App() {
 
 
 
-return (
+
+
     // <div className="App">{spideyJSX}</div>
       //  <ExampleComponent/>
       //  <Welcome name="students">
@@ -150,17 +164,34 @@ return (
 //<MoviesList/>
 //<MoodChanger/>
 
-//Exercise 2
-<BigCats/>
+//Exercise 2, 4 and 5
+//<BigCats/>
 
 //<BirthdayTranslator/>
 //<Weather/>
 //<LoginForm/>
 //Exercise 3
 //<EmojiChanger/>
-
-
+//<ErrorBoundary/>
+//<ExplodingBomb/>
+//<Clock/>
+//<ClockDisplay />
+//<ActivityFinder/>
+//<WeatherAPIProxy/>
+//<RefCounter />
+//<VideoPlayer/>
+//<ReducerCounter/>
+//<PostListReducer/>
+//<SubscribeForm/>
+return (
+//   <UserProvider>
+//     <ActivityFinder2/>
+// </UserProvider>
+<BitcoinRates/>
 );
 }
+
+
+
 
 export default App;

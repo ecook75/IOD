@@ -45,7 +45,7 @@ const [currentMovies, setCurrentMovies] =
 useState(movies);
 
 
-const movieItems = currentMovies.map(movie => (
+const movieItems = currentmovies.map(movie => (
 <Movie
 key={movie.id} // key prop is required for lists
 title={movie.title}
