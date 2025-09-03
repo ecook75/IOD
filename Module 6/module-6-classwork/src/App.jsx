@@ -23,8 +23,23 @@ import VideoPlayer from './components/VideoPlayer'
 import PostListReducer from './components/PostListReducer'
 import SubscribeForm from './components/SubscribeForm'
 import ActivityFinder2 from './components/ActivityFinder2'
-import { UserProvider } from './components/context/UserContext'
 import BitcoinRates from './components/BitcoinRates'
+import { UserProvider } from "./context/UserContext";
+import MyThemeProvider  from "./context/MyThemeProvider";
+
+import ThemeToggleButton from "./components/ThemeToggleButton";
+import AppRoutes from './routes/AppRoutes'
+import ButtonAppBar from './components/MUINavBar'
+import NavBar from "./components/NavBar";
+import AboutPage from './pages/AboutPage';
+import EmojiProvider from './context/EmojiProvider'
+import CustomCard from './components/CustomCard'
+import BasicGrid from './components/BasicGrid'
+import MUIForm from './components/MUIForm'
+import MUIDialog from './components/MUIDialog'
+import BasicUsage from './components/BasicUsage'
+import { tealTheme } from './themes/tealTheme'
+//import MyThemeProvider from './context/MyThemeProvider'
 //Exercise 3
 
 
@@ -38,6 +53,9 @@ import BigCats from './components/BigCats'
 import BirthdayTranslator from './components/BirthdayTranslator'
 import Weather from './components/Weather'
 import ReducerCounter from './components/ReducerCounter'
+import { ThemeProvider } from '@emotion/react'
+import Homepage from './pages/Homepage'
+import EmojiChanger from './components/Emoji'
 // function ExampleComponent() {
 // return (
 // <div className="ExampleComponent componentBox">
@@ -169,9 +187,8 @@ function App() {
 
 //<BirthdayTranslator/>
 //<Weather/>
-//<LoginForm/>
+
 //Exercise 3
-//<EmojiChanger/>
 //<ErrorBoundary/>
 //<ExplodingBomb/>
 //<Clock/>
@@ -184,10 +201,32 @@ function App() {
 //<PostListReducer/>
 //<SubscribeForm/>
 return (
-//   <UserProvider>
-//     <ActivityFinder2/>
-// </UserProvider>
-<BitcoinRates/>
+  //<CustomCard/>
+   //<BasicGrid/>
+   //<MUIForm/>
+   //<MUIDialog text={'My first MUI Dialog'}/>
+//<ThemeProvider theme={tealTheme}>
+//<CustomCard/>
+//<BasicGrid/>
+
+     <UserProvider>
+    <MyThemeProvider>
+      {/* <EmojiProvider> */}
+        {/* <EmojiChanger/> */}
+        {/* <BitcoinRates/> */}
+        <ButtonAppBar/>
+        <NavBar/>
+<AppRoutes/>
+
+        
+      {/* </EmojiProvider> */}
+    </MyThemeProvider>
+</UserProvider>
+
+
+
+
+
 );
 }
 

@@ -1,14 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ErrorBoundary } from 'react-error-boundary'
 import './index.css'
 import App from './App.jsx'
-import ErrorMessage from './components/ErrorMessage.jsx'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from "react-router-dom";  
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ErrorBoundary FallbackComponent={ErrorMessage}>
+    <BrowserRouter>
     <App />
-    </ErrorBoundary>
+    </BrowserRouter>
   </StrictMode>,
 )

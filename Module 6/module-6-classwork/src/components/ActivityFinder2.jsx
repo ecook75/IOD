@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { useData } from "./hooks/UseData";
+import { useData } from "../hooks/UseData";
 
 function ActivityFinder2() { // Fetches a random activity
 

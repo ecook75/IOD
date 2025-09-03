@@ -28,5 +28,6 @@ onChange: handleChange
 return [inputProps, reset];
 }
 
-// Name this file useFormInput.jsx and store in a separate folder
+// Name this file useFormInput.jsx and store in a separate 
+// folder
 // to your components, typically called 'hooks'

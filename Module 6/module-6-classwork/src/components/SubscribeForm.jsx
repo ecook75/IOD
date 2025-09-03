@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useFormInput } from './hooks/UseFormInput';
+import { useFormInput } from '../hooks/UseFormInput';
 
 
 // export default function SubscribeForm() {

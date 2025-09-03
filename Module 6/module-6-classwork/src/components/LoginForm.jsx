@@ -1,60 +1,60 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { useUserContext } from "../context/UserContext";
+import { MyThemeContext } from "../context/MyThemeProvider";
+import ThemeToggleButton from "./ThemeToggleButton";
+import { TextField } from '@mui/material';
 
 function LoginForm() {
+  const [userEmail, setUserEmail] = useState('');
+  const [userPassword, setUserPassword] = useState('');
+  const [submitResult, setSubmitResult] = useState('');
 
-// input state values always need to be strings - empty initially
+  const { currentUser, handleUpdateUser } = useUserContext();
+  const { theme } = useContext(MyThemeContext);           
 
-const [userEmail, setUserEmail] = useState('');
-const [userPassword, setUserPassword] = useState('');
-
-const [submitResult, setSubmitResult] = useState('');
-
-
-const handleSubmit = (e) => {
-    e.preventDefault(); //prevent page reloading on form submit
-
-    //add some password validation
-    if (userPassword.length < 5) {
-    setSubmitResult('Password must be at least 5 characters long');
- } else if (userPassword === userEmail) {
-    setSubmitResult('Password must not match email address');
- } else  {
-    setSubmitResult('Successful login.');
- }
-}
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (userPassword.length < 5) setSubmitResult('Password must be at least 5 characters long');
+    else if (userPassword === userEmail) setSubmitResult('Password must not match email address');
+    else {
+      setSubmitResult('Successful login.');
+      handleUpdateUser({ email: userEmail });
+    }
+  };
+if (currentUser?.email) {
+    return (
+      <div className="LoginForm componentBox"
+           style={{ background: theme.background, color: theme.foreground, padding: 16, borderRadius: 12 }}>
+        <p>Welcome {currentUser.email}!</p>
+        <button onClick={() => handleUpdateUser({})}>Log Out</button>
+        <div style={{ marginTop: 12 }}><ThemeToggleButton /></div>
+      </div>
+    );
+  }
 return (
-
-<div className="LoginForm componentBox">
-
-<div className="formRow">
-
-{/* Controlled form element needs both value and onChange.
-onChange handler uses event param e to access target
-value.
-Whenever user types, new value is stored in state. */}
-
-<label>Email Address:
-
-<input type="email" value={userEmail} name="userEmail"
-onChange={(e) => setUserEmail(e.target.value)} />
-</label>
-</div>
-
-<div className="formRow">
-<label>Password:
-<input type="password" value={userPassword} name="password"
-onChange={(e) => setUserPassword(e.target.value)} />
-</label>
-<form onSubmit={handleSubmit}>
-    <button>Log In</button>
-    <p>{submitResult}</p>
-</form>
-</div>
-
-</div>
-)
+    <div className="LoginForm componentBox"
+         style={{ background: theme.background, color: theme.foreground, padding: 16, borderRadius: 12 }}>
+      <form onSubmit={handleSubmit} noValidate>
+        <div className="formRow">
+          {/* <label>Email Address:
+            <input type="email" value={userEmail} name="userEmail"
+                   onChange={(e) => setUserEmail(e.target.value)} required />
+          </label> */}
+          <TextField type="email" value={userEmail} name="userEmail"
+                   onChange={(e) => setUserEmail(e.target.value)} required 
+          label="Email" />
+        </div>
+        <div className="formRow">
+          <label>Password:
+            <input type="password" value={userPassword} name="password"
+                   onChange={(e) => setUserPassword(e.target.value)} minLength={5} required />
+          </label>
+        </div>
+        <button type="submit">Log In</button>
+        <p aria-live="polite">{submitResult}</p>
+      </form>
+      <div style={{ marginTop: 12 }}><ThemeToggleButton /></div>
+    </div>
+  );
 }
-// try removing the onChange prop and typing in a field
-
-export default LoginForm
+export default LoginForm;
