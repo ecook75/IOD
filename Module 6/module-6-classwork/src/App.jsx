@@ -39,6 +39,7 @@ import MUIForm from './components/MUIForm'
 import MUIDialog from './components/MUIDialog'
 import BasicUsage from './components/BasicUsage'
 import { tealTheme } from './themes/tealTheme'
+import { SignUpFormContext } from '../../MP2.jsx/context/SignUpFormContext'
 //import MyThemeProvider from './context/MyThemeProvider'
 //Exercise 3
 
@@ -92,19 +93,19 @@ import EmojiChanger from './components/Emoji'
 // }
 
 // object storing comment data - passed as props
-const comment = {
-date: new Date(),
-text: 'I hope you enjoy learning React!',
-author: { //}
-name: 'Hello Kitty',
-avatarUrl: 'https://placecats.com/g/64/64',
-},
-};
+// const comment = {
+// date: new Date(),
+// text: 'I hope you enjoy learning React!',
+// author: { //}
+// name: 'Hello Kitty',
+// avatarUrl: 'https://placecats.com/g/64/64',
+// },
+// };
 
-const author = {
-name: 'Hello Kitty',
-avatarUrl: 'https://placecats.com/g/64/64',
-}
+// const author = {
+// name: 'Hello Kitty',
+// avatarUrl: 'https://placecats.com/g/64/64',
+// }
 
 
 
@@ -217,8 +218,8 @@ return (
         <ButtonAppBar/>
         <NavBar/>
 <AppRoutes/>
-
-        
+        <SignUpForm/>
+        <SignUpFormContext/>
       {/* </EmojiProvider> */}
     </MyThemeProvider>
 </UserProvider>

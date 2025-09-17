@@ -32,7 +32,7 @@ function AppRoutes(props) {
         </Route> */}
         {/* <Homepage {...props} /><ProtectedRoute> */}
         <Route path="home" element={<Homepage />} />
-        <Route path="bitcoin" element={<BitcoinRates />} />
+        {/* <Route path="bitcoin" element={<BitcoinRates />} /> */}
         <Route path="login" element={<LoginForm />} />
           
         {/* </ProtectedRoute>
